@@ -1,0 +1,43 @@
+{
+  "name": "nuxt-csrf",
+  "version": "0.0.0",
+  "description": "Add some good old CSRF to your Nuxt app",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Sam Garson <samtgarson@gmail.com>"
+    }
+  ],
+  "main": "lib/module.js",
+  "repository": "https://github.com/samtgarson/nuxt-csrf",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint lib test",
+    "test": "npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish"
+  },
+  "eslintIgnore": [
+    "lib/templates/*.*"
+  ],
+  "files": [
+    "lib"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib",
+      "test"
+    ]
+  },
+  "dependencies": {
+    "client-sessions": "^0.8.0",
+    "csrf": "^3.0.6"
+  },
+  "devDependencies": {
+    "nuxt-module-builder": "latest"
+  }
+}

@@ -1,18 +1,10 @@
-# nuxt-csrf
-[![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-csrf/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-csrf)
-[![npm](https://img.shields.io/npm/dt/nuxt-csrf.svg?style=flat-square)](https://npmjs.com/package/nuxt-csrf)
-[![CircleCI](https://img.shields.io/circleci/project/github/samtgarson/nuxt-csrf.svg?style=flat-square)](https://circleci.com/gh/samtgarson/nuxt-csrf)
-[![Codecov](https://img.shields.io/codecov/c/github/samtgarson/nuxt-csrf.svg?style=flat-square)](https://codecov.io/gh/samtgarson/nuxt-csrf)
-[![Dependencies](https://david-dm.org/samtgarson/nuxt-csrf/status.svg?style=flat-square)](https://david-dm.org/samtgarson/nuxt-csrf)
-[![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
+**nuxt-csrf** _CSRF protection for your Nuxt app_
 
-> Add some good old CSRF to your Nuxt app
+## Usage
 
-[📖 **Release Notes**](./CHANGELOG.md)
-
-## Features
-
-The module features
+1. Install the module
+2. You will find your CSRF token in a Vuex store module
+3. Send the token along with any API requests (except: `GET|HEAD|OPTIONS|TRACE`)
 
 ## Setup
 - Add `nuxt-csrf` dependency using yarn or npm to your project
@@ -25,17 +17,11 @@ The module features
     'nuxt-csrf',
 
     // With options
-    ['nuxt-csrf', { /* module options */ }],
+    ['nuxt-csrf', {
+      sessionName: 'myCSRFSession', 
+      secretKey: process.env.SECRET_KEY,
+      headerName: 'X-MY-CSRF-HEADER'
+    }],
  ]
 }
 ```
-
-## Usage
-
-Module Description
-
-## License
-
-[MIT License](./LICENSE)
-
-Copyright (c) Sam Garson <samtgarson@gmail.com>

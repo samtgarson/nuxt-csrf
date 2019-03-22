@@ -1,6 +1,7 @@
 module.exports = {
   root: true,
   parserOptions: {
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
   env: {
@@ -24,7 +25,6 @@ module.exports = {
     'no-console': 2
   },
   globals: {
-    'jest/globals': true,
-    jasmine: true
+    'jest/globals': true
   }
 }

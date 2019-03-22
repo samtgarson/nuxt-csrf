@@ -18,7 +18,7 @@
 
     // With options
     ['nuxt-csrf', {
-      sessionName: 'myCSRFSession', 
+      sessionName: 'myCSRFSession',
       secretKey: process.env.SECRET_KEY,
       headerName: 'X-MY-CSRF-HEADER'
     }],

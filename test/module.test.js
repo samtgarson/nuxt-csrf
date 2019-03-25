@@ -1,3 +1,4 @@
+jest.setTimeout(20000)
 process.env.PORT = process.env.PORT || 5060
 process.env.NODE_ENV = 'production'
 
@@ -25,7 +26,7 @@ describe('basic', () => {
     await nuxt.close()
   })
 
-  test('render', async () => {
+  test('renders a placeholder for the token', async () => {
     const html = await get('/')
     expect(html).toContain('token')
   })

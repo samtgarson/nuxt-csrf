@@ -2,19 +2,17 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: true,
   collectCoverageFrom: [
-    'lib/*.js',
-    '!lib/plugin.js'
+    'lib/**/*.js'
   ],
+  coverageDirectory: './coverage/',
   moduleNameMapper: {
     '^~/(.*)$': '<rootDir>/lib/$1',
     '^~~$': '<rootDir>',
     '^@@$': '<rootDir>',
-    '^@/(.*)$': '<rootDir>/lib/$1'
+    '^@/(.*)$': '<rootDir>/example/$1'
   },
-  setupFilesAfterEnv: [
-    './test/jest.setup.js'
-  ],
   transform: {
-    '^.+\\.js$': 'babel-jest'
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+    ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
   }
 }

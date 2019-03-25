@@ -16,24 +16,13 @@
   "scripts": {
     "dev": "nuxt example",
     "lint": "eslint lib test",
-    "test": "yarn run lint && jest",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --verbose --watchAll",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
-  "eslintIgnore": [
-    "lib/templates/*.*"
-  ],
   "files": [
     "lib"
   ],
-  "jest": {
-    "testEnvironment": "node",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "lib",
-      "test"
-    ]
-  },
   "dependencies": {
     "client-sessions": "^0.8.0",
     "csrf": "^3.0.6"
@@ -41,8 +30,6 @@
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
     "@nuxtjs/eslint-config": "latest",
     "babel-eslint": "latest",
     "babel-jest": "latest",
@@ -56,11 +43,11 @@
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
     "get-port": "latest",
-    "husky": "latest",
     "jest": "latest",
     "nuxt-edge": "latest",
     "request": "latest",
     "request-promise-native": "latest",
-    "standard-version": "latest"
+    "standard-version": "latest",
+    "vue-jest": "latest"
   }
 }

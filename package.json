@@ -16,8 +16,7 @@
   "scripts": {
     "dev": "nuxt example",
     "lint": "eslint lib test",
-    "test": "NODE_ENV=test jest",
-    "test:watch": "NODE_ENV=test jest --verbose --watchAll",
+    "test": "jest",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "files": [

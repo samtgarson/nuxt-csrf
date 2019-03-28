@@ -5,7 +5,8 @@
   "license": "MIT",
   "contributors": [
     {
-      "name": "Sam Garson <samtgarson@gmail.com>"
+      "name": "Sam Garson <samtgarson@gmail.com>",
+      "name": "Robert Friedman <fifitoodles@tutanota.com"
     }
   ],
   "main": "lib/module.js",

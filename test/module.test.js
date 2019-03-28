@@ -7,9 +7,10 @@ const request = require('request-promise-native')
 const getPort = require('get-port')
 
 const config = require('../example/nuxt.config')
-config.dev = false
+config.mode = 'universal'
 
-let nuxt, port
+let port = null
+let nuxt = null
 
 const url = path => `http://localhost:${port}${path}`
 const get = path => request(url(path))

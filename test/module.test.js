@@ -7,7 +7,6 @@ const request = require('request-promise-native')
 const getPort = require('get-port')
 
 const config = require('../example/nuxt.config')
-config.mode = 'universal'
 
 let port = null
 let nuxt = null

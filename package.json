@@ -5,8 +5,12 @@
   "license": "MIT",
   "contributors": [
     {
-      "name": "Sam Garson <samtgarson@gmail.com>",
-      "name": "Robert Friedman <fifitoodles@tutanota.com"
+      "name": "Sam Garson",
+      "email": "samtgarson@gmail.com"
+    },
+    {
+      "name": "Robert Friedman",
+      "email": "fifitoodles@tutanota.com"
     }
   ],
   "main": "lib/module.js",
@@ -44,9 +48,9 @@
     "eslint-plugin-vue": "latest",
     "get-port": "latest",
     "jest": "latest",
-    "nuxt-edge": "latest",
+    "node-fetch": "^2.3.0",
+    "nuxt-edge": "^2.6.0-25901287.3eec1152",
     "request": "latest",
-    "request-promise-native": "latest",
     "standard-version": "latest",
     "vue-jest": "latest"
   }

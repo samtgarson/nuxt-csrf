@@ -16,12 +16,31 @@
   "scripts": {
     "dev": "nuxt example",
     "lint": "eslint lib test",
-    "test": "jest",
+    "test": "npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
+  "eslintIgnore": [
+    "node_modules",
+    ".nuxt",
+    "lib/plugin.js"
+  ],
   "files": [
     "lib"
   ],
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": false,
+    "moduleNameMapper": {
+      "^~/(.*)$": "<rootDir>/lib/$1",
+      "^~~$": "<rootDir>",
+      "^@@$": "<rootDir>",
+      "^@/(.*)$": "<rootDir>/example/$1"
+    },
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    }
+  },
   "dependencies": {
     "client-sessions": "^0.8.0",
     "csrf": "^3.0.6"

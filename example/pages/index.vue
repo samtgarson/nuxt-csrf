@@ -1,7 +1,7 @@
 <template>
-<div>
+  <div>
     token: {{ token }}
-</div>
+  </div>
 </template>
 
 <script>
